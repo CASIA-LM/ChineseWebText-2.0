@@ -88,7 +88,7 @@ In preprocessing procedure, we have used some handcrafted rules to remove the ex
 #### 1. The Classification Results of Different Evaluation Models
 
 <div align="center">
-  <img src=".\assets\BERTEval" width="50%" />
+  <img src=".\assets\BERTEval.png" width="50%" />
 </div>
 
 #### 2. BERTEval Training and Inference
@@ -129,6 +129,7 @@ In preprocessing procedure, we have used some handcrafted rules to remove the ex
   score_threshold = 0.99
   selected_data = text_select_with_pred(file, score_threshold)
 
+### Stage 3:  Domain Evaluation
 
-
+#### 1. Composition of Domain Training and Test Data
 
