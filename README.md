@@ -71,7 +71,7 @@ To enhance training efficiency and model performance, a subsequent analysis usin
 Here is an example command to run the preprocessing stage:
 
 ```shell
-python .\Preprocessing\preprocess.py 
+python ./Preprocessing/preprocess.py --dates 
 ```
 
 ### Stage 2:  Quality Evaluation
@@ -150,7 +150,7 @@ To improve classification accuracy and generalizability, an iterative approach c
 The following is the implementation of the domain classification process:
 
 ```shell
-python .\Domain_Classifier\domain_classifier_process.py your_data_path_to_classifier.jsonl > result_output_path.jsonl 
+python ./Domain_Classifier/domain_classifier_process.py your_data_path_to_classifier.jsonl > result_output_path.jsonl 
 ```
 
 
