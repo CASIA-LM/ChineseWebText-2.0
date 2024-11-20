@@ -132,4 +132,33 @@ In preprocessing procedure, we have used some handcrafted rules to remove the ex
 ### Stage 3:  Domain Evaluation
 
 #### 1. Composition of Domain Training and Test Data
+<div align="center">
+  <img src=".\assets\Composition of Domain.png" width="50%" />
+</div>
+
+#### 2. Steps for Domain Classification
+
+We developed an interactive rule- and model-guided classification system to provide accurate, domain-specific single-label and multi-label classifications for each data item.The specific process is as follows:
+
+- #### Rule-Based Classification
+
+Initially, a rule-based classification approach was employed to assign preliminary labels based on expert-curated keywords. Each data item could receive one or more labels depending on keyword matches. If no category-specific keywords were detected, the item was assigned a "general" label.
+
+- #### Model-Based Classification
+
+Following the rule-based approach, FastText was utilized to perform model-based classification in a multi-label and multi-category framework.
+
+- #### Interactive Rule-Based and Model-Based Classification
+
+To enhance classification accuracy and generalizability, an iterative process combining rule- and model-based methods was employed.
+
+The following is the implementation of the domain classification process:
+
+```shell
+python ./Domain_Classifier./domain_classifier_process.py
+```
+### Stage :  Toxicity Evaluation
+
+
+
 
