@@ -150,7 +150,7 @@ To improve classification accuracy and generalizability, an iterative approach c
 The following is the implementation of the domain classification process:
 
 ```shell
-python .\Domain_Classifier.\domain_classifier_process.py
+python .\Domain_Classifier\domain_classifier_process.py your_data_path_to_classifier.jsonl > result_output_path.jsonl 
 ```
 
 
