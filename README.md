@@ -8,15 +8,15 @@ We have released the latest and largest Chinese dataset, ChineseWebText 2.0, whi
   {
    "text": "近日，黑龙江省高校校报协会第十四届学术年会暨校报工作交流研讨会在东北农业大学举行。我校10件新闻作品喜获2项一等奖，2项二等奖，6项三等奖……",
    "domain":
-           {
-             "single_label": "news",
-             "multi_label": ["news", "education"]
-           },
+      {
+         "single_label": "news",
+         "multi_label": ["news", "education"]
+      },
    "toxicity":
-           {
-             "label": 0,
-             "score": 1.0347155694034882e-05
-           },
+      {
+         "label": 0,
+         "score": 1.0347155694034882e-05
+      },
    "quality_score": 0.96044921875
    }
     ```
@@ -41,12 +41,7 @@ We introduce a new toolchain, MDFG-tool (see Figure 1). We begin with the coarse
 ### Environment Dependencies
 
 ```shell
-transformers==4.31.0
-scipy==1.11.1
-numpy==1.24.3
-jieba==0.42.1
-zhconv==1.4.3
-fasttext==0.9.2
+requirement.txt
 ```
 
 ### Stage 1: Preprocessing
