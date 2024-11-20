@@ -85,10 +85,10 @@ In preprocessing procedure, we have used some handcrafted rules to remove the ex
 
 #### Stage 2.1:  BERTEval
 
-#### 1. BERTEval Training Data Composition
+#### 1. The Classification Results of Different Evaluation Models
 
 <div align="center">
-  <img src=".\assets\BERTEval_data_composition.png" width="50%" />
+  <img src=".\assets\BERTEval" width="50%" />
 </div>
 
 #### 2. BERTEval Training and Inference
