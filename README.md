@@ -142,7 +142,7 @@ We developed an interactive rule- and model-guided classification system to prov
 
 - #### Rule-Based Classification
 
-Initially, a rule-based classification approach was employed to assign preliminary labels based on expert-curated keywords. Each data item could receive one or more labels depending on keyword matches. If no category-specific keywords were detected, the item was assigned a "general" label.
+A rule-based classification approach was initially employed to assign preliminary labels using expert-curated keywords. Specifically, 20 to 50 keywords were designated for each category, with a frequency threshold of 3 to 5 non-repeating occurrences. Each text could receive single or multiple labels depending on keyword matches, while texts without category-specific keywords were labeled as "general."
 
 - #### Model-Based Classification
 
@@ -150,15 +150,48 @@ Following the rule-based approach, FastText was utilized to perform model-based 
 
 - #### Interactive Rule-Based and Model-Based Classification
 
-To enhance classification accuracy and generalizability, an iterative process combining rule- and model-based methods was employed.
+To improve classification accuracy and generalizability, an iterative approach combined rule- and model-based methods. High-confidence predictions (confidence > 0.9) from the model were used to refine rule-based keywords, enhancing training data quality. This process allowed fine-tuning of labels, particularly for structured data categories like "instruction," ensuring comprehensive label coverage.
 
 The following is the implementation of the domain classification process:
 
 ```shell
 python ./Domain_Classifier./domain_classifier_process.py
 ```
-### Stage :  Toxicity Evaluation
 
+
+### Stage 4:  Toxicity Evaluation
+#### 1. Composition of Toxicity Training and Test Data
+<div align="center">
+  <img src=".\assets\Composition of Toxicity.png" width="50%" />
+</div>
+
+#### 2. Steps for Toxicity Classification
+
+To evaluate and score the toxicity levels within the dataset, we trained a FastText model, which, compared to the BERT model, strikes an optimal balance between processing performance and computational efficiency, delivering high accuracy while significantly reducing both training and inference time.The specific steps are outlined as follows:
+
+- #### Initail Training Data
+
+To enhance the efficiency of data collection, we integrated high-quality Chinese toxicity datasets into the initial training set. We also sampled a subset of data from our large-scale dataset to serve as benign samples. Furthermore, to maintain a balanced distribution between toxic and benign samples, the number of toxic samples in the training set was doubled. Using this data, we trained an initial FastText model, named Toxic Classifier R0.
+
+- #### LLM-in-the-loop Training Data Construction
+
+We refined our dataset by applying Toxic Classifier R0 to score a subset from our large-scale dataset, selecting samples with toxicity scores above 0.5 for further analysis. These candidates were re-evaluated by the Qwen2.5-32B model, classifying them into toxic and benign categories to form a new training set. The fastText model was then retrained on this refined data, enhancing its performance. This iterative process, conducted over two rounds, improved the model’s generalization and classification accuracy, yielding Toxic Classifier R1 in the first round and R2 in the second.
+
+- #### Data-Specific Toxicity Classification System
+
+While models trained with the LLM-in-the-loop approach demonstrate strong generalization across diverse datasets, their performance is limited on specialized datasets, such as Chinese poetry, which contain fewer toxic samples. To address this, we incorporated directly extracted samples into the training set to improve performance across varied data types. Additionally, we introduced a hybrid rule-based and model-based method to handle mathematical formulas, classifying sentences with numerical and symbolic elements exceeding 50% as non-toxic instructions.
+
+- Step 1: Toxic_Classifier Training
+  
+```shell
+python ./toxic_classifier./main.py
+```
+
+- Step 2: Toxic_Classifier Prediction
+- 
+```shell
+python ./toxic_classifier./predict_toxic.py
+```
 
 
 
