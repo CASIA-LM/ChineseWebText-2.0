@@ -186,7 +186,7 @@ python ./toxic_classifier/main.py --mode train --train_file ./data/train.txt --t
 - Step 2: Toxic_Classifier Prediction
 
 ```shell
-python ./toxic_classifier/predict_toxic.py
+python ./toxic_classifier/predict_toxic.py  file_path  save_path
 ```
 
 ## Citation
