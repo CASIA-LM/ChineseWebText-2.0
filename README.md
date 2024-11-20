@@ -88,7 +88,7 @@ In preprocessing procedure, we have used some handcrafted rules to remove the ex
 #### 1. The Classification Results of Different Evaluation Models
 
 <div align="center">
-  <img src=".\assets\BERTEval.png" width="50%" />
+  <img src=".\assets\BERTEval.png" width="40%" />
 </div>
 
 #### 2. BERTEval Training and Inference
@@ -162,7 +162,7 @@ python ./Domain_Classifier./domain_classifier_process.py
 ### Stage 4:  Toxicity Evaluation
 #### 1. Composition of Toxicity Training and Test Data
 <div align="center">
-  <img src=".\assets\Composition of Toxicity.png" width="50%" />
+  <img src=".\assets\Composition of Toxicity.png" width="30%" />
 </div>
 
 #### 2. Steps for Toxicity Classification
