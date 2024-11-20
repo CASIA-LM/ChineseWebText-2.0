@@ -179,13 +179,14 @@ While models trained with the LLM-in-the-loop approach demonstrate strong genera
 - Step 1: Toxic_Classifier Training
   
 ```shell
-python .\toxic_classifier.\main.py
+cd fasttext
+python ./toxic_classifier/main.py --mode train --train_file ./data/train.txt --test_file ./data/test.txt
 ```
 
 - Step 2: Toxic_Classifier Prediction
 
 ```shell
-python .\toxic_classifier.\predict_toxic.py
+python ./toxic_classifier/predict_toxic.py
 ```
 
 ## Citation
