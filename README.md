@@ -188,9 +188,16 @@ python ./toxic_classifier./main.py
 ```
 
 - Step 2: Toxic_Classifier Prediction
-- 
+
 ```shell
 python ./toxic_classifier./predict_toxic.py
+```
+
+## Citation
+Please cite the paper if you use the data or code in this repo.
+
+```shell
+
 ```
 
 
