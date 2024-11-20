@@ -71,7 +71,7 @@ To enhance training efficiency and model performance, a subsequent analysis usin
 Here is an example command to run the preprocessing stage:
 
 ```shell
-python preprocess.py 
+python .\Preprocessing\preprocess.py 
 ```
 
 ### Stage 2:  Quality Evaluation
@@ -150,7 +150,7 @@ To improve classification accuracy and generalizability, an iterative approach c
 The following is the implementation of the domain classification process:
 
 ```shell
-python ./Domain_Classifier./domain_classifier_process.py
+python .\Domain_Classifier.\domain_classifier_process.py
 ```
 
 
@@ -179,13 +179,13 @@ While models trained with the LLM-in-the-loop approach demonstrate strong genera
 - Step 1: Toxic_Classifier Training
   
 ```shell
-python ./toxic_classifier./main.py
+python .\toxic_classifier.\main.py
 ```
 
 - Step 2: Toxic_Classifier Prediction
 
 ```shell
-python ./toxic_classifier./predict_toxic.py
+python .\toxic_classifier.\predict_toxic.py
 ```
 
 ## Citation
