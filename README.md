@@ -1,5 +1,5 @@
 # ChineseWebText 2.0: Large-Scale High-quality Chinese Web Text with Multi-dimensional and fine-grained information
-This directory contains the ChineseWebText2.0 dataset, and a new tool-chain called MDFG-tool for constructing large-scale and high-quality Chinese datasets with multi-dimensional and fine-grained information. Our ChineseWebText2.0 dataset is publicly available on huggingface (here).
+This directory contains the ChineseWebText2.0 dataset, and a new tool-chain called MDFG-tool for constructing large-scale and high-quality Chinese datasets with multi-dimensional and fine-grained information. Our ChineseWebText2.0 dataset is publicly available on huggingface [(here)]([https://huggingface.co/datasets/CASIA-LM/ChineseWebText](https://huggingface.co/datasets/CASIA-LM/ChineseWebText2.0)).
 ## ChineseWebText2.0
 - ### Dataset Overview
 We have released the latest and largest Chinese dataset, ChineseWebText 2.0, which consists of 3.8 TB of data. Each text in the dataset is accompanied by a quality score, domain single-label and multi-label tags, as well as toxicity classification and scores, enabling LLM researchers to select data based on new quality thresholds.
