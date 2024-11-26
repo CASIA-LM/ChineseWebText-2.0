@@ -68,6 +68,6 @@ def main(input_file):
     
 
 if __name__ == '__main__':
-    topics = ['encyclopedia', 'book', 'dialogue', 'education', 'finance', 'law', 'math', 'military', 'news', 'medicine', 'technology', 'general']
+    topics = ['encyclopedia', 'book', 'dialogue', 'education', 'finance', 'law', 'math', 'news', 'medicine', 'technology', 'general']
     file_path = sys.argv[1]
     main(file_path)
