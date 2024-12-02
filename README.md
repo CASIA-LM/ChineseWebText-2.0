@@ -193,7 +193,15 @@ python ./toxic_classifier/predict_toxic.py  file_path  save_path
 Please cite the paper if you use the data or code in this repo.
 
 ```shell
-
+@misc{zhang2024chinesewebtext20largescalehighquality,
+      title={ChineseWebText 2.0: Large-Scale High-quality Chinese Web Text with Multi-dimensional and fine-grained information}, 
+      author={Wanyue Zhang and Ziyong Li and Wen Yang and Chunlin Leng and Yinan Bai and Qianlong Du and Chengqing Zong and Jiajun Zhang},
+      year={2024},
+      eprint={2411.19668},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2411.19668}, 
+}
 ```
 
 
